@@ -1,5 +1,5 @@
-from django.test import TestCase
 import pytest
+
 
 @pytest.mark.django_db
 def test_user_can_register(api_client):
