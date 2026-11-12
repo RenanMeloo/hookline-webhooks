@@ -7,6 +7,7 @@ from django.db import models
 def generate_secret():
     return secrets.token_hex(32)
 
+
 class Endpoint(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="endpoints")
     url = models.URLField(max_length=500)

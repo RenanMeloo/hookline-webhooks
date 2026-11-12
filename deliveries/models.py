@@ -26,6 +26,7 @@ class Delivery(models.Model):
     def __str__(self):
         return f"{self.event} -> {self.endpoint} ({self.status})"
 
+
 class DeliveryAttempt(models.Model):
     delivery = models.ForeignKey(Delivery, on_delete=models.CASCADE, related_name="attempts")
     attempt_number = models.PositiveIntegerField()

@@ -9,5 +9,3 @@ class RegisterView(generics.CreateAPIView):
     serializer_class = RegisterSerializer
     # set the permission classes for the view
     permission_classes = [AllowAny]
-
-
